@@ -3,8 +3,8 @@
 ### About Me:<br> 
 I'm Artur, a passionate web creator dedicated to crafting<br> 
 amazing online experiences. Right now, I'm diving into <br>
-a Front-End Bootcamp to level up my skills. I am <br>
-learning and growing day by day.
+a Front-End Bootcamp to level up my skills.<br>
+learning and growing day by day. :v:
 
 #### Socials:  
 

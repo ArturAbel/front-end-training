@@ -5,6 +5,8 @@ I'm Artur, a passionate web creator dedicated to crafting<br>
 amazing online experiences. Right now, I'm diving into <br>
 a Front-End Bootcamp to level up my skills.<br>
 learning and growing day by day. :v:
+<br><br><a href="https://gifyu.com/image/SV3nd"><img src="https://s12.gifyu.com/images/SV3nd.gif" alt="cat" border="0" width="250" height="220" /></a>
+
 
 #### Socials:  
 

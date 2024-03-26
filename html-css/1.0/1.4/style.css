@@ -1,0 +1,91 @@
+
+/* Structure building */
+.body{
+   margin: 100px 250px;
+   background: #9FC0D2;
+}
+.main{
+   margin: 0px 100px;
+}
+
+/* General */
+.card-header h1{
+   color:#4C91B6;
+   font-size: x-large;
+   text-transform: capitalize;
+}
+.card-header h5{
+   color: #E5F7F7;
+   font-weight: lighter;
+   font-size: x-small;
+}
+.card-header h2{
+   color: #E5F7F7;
+   font-weight: lighter;
+   font-size: medium;
+   text-transform: capitalize;
+}
+
+/* The 1st card */
+.card-1{
+   width: 250px;
+   margin: 40px 80px;
+   border: 5px solid #05080A;
+   box-shadow: 0 0 50px #000000;
+   font-family: sans-serif;
+   text-align: center;
+   border-radius: 15px;
+   background: #05080A;
+}
+.card-header img{
+   margin-top: 10px;
+   border-radius: 15px;
+}
+.card-body{
+   color: #E5F7F7;
+   font-size: small;
+   text-indent: 20px;
+   margin: 20px;
+   text-align: left;
+}
+.card-icon{
+   text-align: center;
+   margin-top: 40px;
+   margin-right: 20px;
+}
+
+/* The second card */
+.card-2{
+   color: #E5F7F7;
+   margin: -80px 300px;
+   width: 250px;
+   border: 5px solid #05080A;
+   box-shadow: 0 0 50px #000000;
+   box-shadow: 10px white;
+   font-family: sans-serif;
+   text-align: center;
+   border-radius: 15px;
+   background: #05080A;
+   box-shadow: -0.5px -0.5px 30px 0px rgb(96, 96, 96);
+}
+.card-button{
+   margin: auto;
+   cursor:pointer;
+   border-radius: 5px;
+   background: transparent;
+   color: #E5F7F7;
+   padding: 10px 30px;
+   border: solid 1px;
+   margin: 30px auto;
+   box-shadow: 5px 5px #E5F7F7;
+   display: inline-block;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Spaces between sections */
+.space{
+   margin: 30px;
+}
+.less-space{
+   margin: -20px;
+}

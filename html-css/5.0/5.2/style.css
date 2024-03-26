@@ -1,0 +1,28 @@
+.card{
+   border: thin solid;
+   box-shadow: 10px 5px 5px black;
+   width: 200px;
+   font-family: sans-serif;
+}
+.card-image{
+   margin:auto;
+   width: 75%;
+   margin-top: 10px;
+}
+.card-text{
+   width: 200px;
+   text-align: center;
+}
+.card-social{
+   width: 200px;
+   background-color: black;
+   text-align: center;
+}
+.icon-size{
+   margin: 10px;
+   width: 30px;
+   height: 30px;
+}
+.smaller-text{
+   font-size: smaller
+}

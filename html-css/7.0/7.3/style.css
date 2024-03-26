@@ -1,0 +1,66 @@
+
+/* Structure */
+*{box-sizing:border-box;}
+.body{
+   background: #8CB9BD;
+}
+.nav{
+   background: white;
+   height: 80px;
+   margin: -10px;
+   padding: 10px;
+}
+.greeting-card{
+   background: #FEFBF6;
+   width: 350px;
+   height: 400px;
+   margin: 200px 600px;
+   font-family: Arial, Helvetica, sans-serif;
+   text-align: center;
+   border: solid 5px #FEFBF6;
+   border-radius: 30px 70px;
+   box-shadow: 0 0 20px black;
+}
+.blockquote{
+   background: white;
+   margin: 200px 600px;
+   height: 200px;
+   width: 350px;
+   padding: 30px;
+   border: inset 10px #B67352;
+   background: #EEE4B1;
+   font-size: larger;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   line-height: 1.4;
+}
+
+/* Greeting Card */
+.header-card h1{
+   padding: 50px;
+}
+.text-card p{
+   padding: 30px;
+   line-height: 1.7;
+}
+/* Navigation Bar */
+.nav li{
+   display: inline;
+   margin-left: 40px;
+   border: solid 2px black;
+   padding: 10px 20px;
+   text-align: center;
+   font-family: Arial, Helvetica, sans-serif;
+   box-shadow: 5px 5px black;
+   background: #FFDBAA;
+   cursor:pointer;
+}
+.nav li:hover{
+   background: white;
+   transition: 0.5s;
+}
+.blockquote cite{
+   font-size: smaller;
+   padding-left: 30px;
+}
+
+

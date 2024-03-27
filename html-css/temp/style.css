@@ -1,0 +1,30 @@
+.parent {
+   display: flex;
+   min-height: 200vh;
+   flex-direction: row;
+  
+   background: #ddd; 
+   padding: 20px 0; 
+ }
+ .child {
+   width: 200px;
+   height: 200px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: white;
+   font-size: 20px;
+   font-family: Arial, sans-serif;
+   margin: 0 20px; 
+ }
+
+ /* position: relative (keeps in normal flow);
+ top:
+ bottom: 
+ left:
+ right: 
+  */
+
+  /* position: absolute  (removes from normal flow) 
+  
+  */

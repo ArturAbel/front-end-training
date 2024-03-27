@@ -1,0 +1,19 @@
+*{
+   box-sizing: border-box;
+}
+#outer{
+      width: 100px;
+   height: 100px;
+   background: darkcyan;
+   margin: 50px;
+   position: relative;  
+}
+/* 1. It didn't work because the default setting is static an in order for the inner box to be absolute the parent box has to be relative  */
+
+#inner{
+   width: 50px;
+   height: 50px;
+   background: lightgreen;
+   position: absolute;
+   top: 10px
+}

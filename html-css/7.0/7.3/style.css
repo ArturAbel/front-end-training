@@ -14,7 +14,8 @@
    background: #FEFBF6;
    width: 350px;
    height: 400px;
-   margin: 200px 600px;
+   margin: 0 auto;
+   margin-top: 50px;
    font-family: Arial, Helvetica, sans-serif;
    text-align: center;
    border: solid 5px #FEFBF6;
@@ -23,7 +24,8 @@
 }
 .blockquote{
    background: white;
-   margin: 200px 600px;
+   margin: 0 auto;
+   margin-top: 50px;
    height: 200px;
    width: 350px;
    padding: 30px;

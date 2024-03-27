@@ -1,0 +1,41 @@
+*{
+   box-sizing: border-box;
+}
+.div-one{
+   height: 200px;
+   width: 300px;
+   background: white;
+   z-index: -4;
+   border: solid black;
+   position: absolute;
+}
+.div-two{   
+   height: 300px;
+   width: 200px;
+   background: white;
+   z-index: -2;
+   border: solid black;
+   position: absolute;
+   left: 200px;
+   bottom: 200px;
+
+}
+.div-three{ 
+   height: 200px;
+   width: 700px;
+   background: white;
+   z-index: -1;
+   border: solid black;
+   position: absolute;
+   top: 300px;
+}
+.div-four{
+   height: 600px;
+   width: 150px;
+   background: white;
+   z-index: 0;
+   border: solid black;
+   position: absolute;
+   left: 500px;
+   bottom: 30px;
+}

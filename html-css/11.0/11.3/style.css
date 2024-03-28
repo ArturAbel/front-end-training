@@ -1,0 +1,30 @@
+*{
+   box-sizing: border-box;
+}
+.main-container{
+   width: 100vw;
+   height: 100vh;
+   background-color: #f3f7cc;
+}
+.box{
+   width: 200px;
+   height: 150px;
+}
+/* Boxes */
+.one{
+   background-color: #468208;
+}
+.two{
+   background-color: #3566fe;
+}
+.three{
+   background-color: #ea4330;
+}
+/* Flex */
+.flex{
+   display: flex;
+}
+.align-end{
+   justify-content: end;
+   align-items: end;
+}

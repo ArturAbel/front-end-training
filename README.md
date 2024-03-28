@@ -1,3 +1,11 @@
+<style>
+  *{
+    background-color: #607274;
+    color: #FFFFFF;
+  }
+  
+</style>
+
 ## front-end-training
 
 ### About Me:<br> 

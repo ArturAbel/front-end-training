@@ -1,0 +1,32 @@
+*{
+   box-sizing: border-box;
+}
+.box {
+   width: 200px;
+   height: 150px;
+   background-color: rgb(0, 0, 0);
+   color: white;
+   border: 10px solid orangered;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.box h4{
+padding: 20px;
+position: relative;
+z-index: 1;
+}
+.box::after{
+   content: "";
+   position: absolute;
+   background-color: black;
+   width: calc(200px - 70px);
+   height: 150px;
+}
+.box::before{
+   content: "";
+   position: absolute;
+   background-color: black;
+   width: 200px;
+   height: calc(150px - 70px);
+}

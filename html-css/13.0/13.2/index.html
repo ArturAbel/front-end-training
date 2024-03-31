@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="/html-css/13.0/13.2/variables.css">
+   <title>Exercise 13.1</title>
+</head>
+<body>
+   <main class="card">
+      <header class="header">
+         <img class="id-img" src="" alt="">
+      </header>
+      <section class="content">
+         <h3 class="name">Artur Abel</h3>
+         <p class="title">Front-end Developer</p>
+         <p class="description">Creating unique websites and enhancing user experience.</p>
+      </section>      
+   </main>
+   <div class="btn-box">
+      <button class="btn" onclick="myFunction()">Toggle Theme</button>
+      <script>
+         function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+            }
+         </script>        
+      </div>
+</body>
+</html>

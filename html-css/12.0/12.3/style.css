@@ -1,0 +1,22 @@
+* {
+   box-sizing: border-box;
+}
+
+.box{
+   width: 200px;
+   height: 200px;
+   background-color: red;
+   position: relative;
+}
+
+.box::after{
+   content: "";
+   background-color: purple;
+   position: absolute;
+   width: 50%;
+   height: 200px;
+}
+.box:hover::after{
+   background-color: rgb(0, 192, 35);
+}
+

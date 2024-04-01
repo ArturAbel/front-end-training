@@ -10,7 +10,6 @@ body {
    background-color: #cecece;
    color: #363334;
 }
-
 .card{
    margin: 60px auto;
    height: 470px;
@@ -20,6 +19,18 @@ body {
    font-family: "Roboto", sans-serif;
    border-radius: 10px;
    box-shadow: 6px -5px 1px 3px #FBF3D5;
+   position: relative;
+
+   .hole{
+    background-color: #cecece;
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: -1px 2px 2px 0 #000000;
+    width: 30px;
+    height: 30px;
+    top: 10px;
+    right: 10px;
+   }
 
    &:hover{
       box-shadow: 0px 3px 10px 10px #a3a3a3;

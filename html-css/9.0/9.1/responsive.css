@@ -1,20 +1,18 @@
 @media screen and (max-width: 420px) {
-  html {
-    overflow-x: hidden;
-  }
+  html,
   body {
     overflow-x: hidden;
   }
 
-  .navbar{
-   position: static;
-   margin: 0;
+  .navbar {
+    position: static;
+    margin: 0;
   }
 
   .navbar__container {
     margin-top: 30px;
     width: 100%;
-    height: 150%;
+    height: 200%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -24,6 +22,7 @@
     z-index: 0;
     padding: 0;
   }
+
   .navbar__btn a {
     font-size: 0.9em;
   }
@@ -35,128 +34,125 @@
     justify-content: center;
     z-index: 0;
     padding-top: 100px;
-
-    .main__content {
-      padding: 30px 30px;
-
-      h1 {
-        font-size: 2em;
-      }
-      h2 {
-        font-size: 1.3em;
-      }
-      p {
-        font-size: 1em;
-      }
-    }
-    .main__img {
-      display: block;
-      width: 50%;
-      height: 50%;
-    }
   }
+
+  .main__content {
+    padding: 30px 30px;
+  }
+
+  .main__content h1 {
+    font-size: 2em;
+  }
+
+  .main__content h2 {
+    font-size: 1.3em;
+  }
+
+  .main__content p {
+    font-size: 1em;
+  }
+
+  .main__img {
+    display: block;
+    width: 50%;
+    height: 50%;
+  }
+
   .services {
+    flex-direction: column;
+    height: 150%;
+    width: 100%;
+  }
+
+  .services h1 {
+    font-size: 1.5em;
+    margin: 0;
+  }
+
+  .services__container {
+    display: flex;
+    flex-direction: column;
+    height: 800px;
+    max-width: 100%;
+    padding: auto;
+  }
+
+  .services__card {
+    height: 60%;
+    max-width: 525px;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .services__card h2 {
+    font-size: 1.3em;
+    text-align: center;
+    margin: 0;
+  }
+
+  .services__card p {
+    text-align: left;
+    width: 100%;
+  }
+
+  .services h2 {
+    width: 100%;
+    height: 100px;
+    text-align: left;
+    margin: 0;
+    font-size: 2em;
+  }
+
+  .footer__container {
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .footer__links {
     flex-direction: column;
     height: 100%;
     width: 100%;
-
-    h1 {
-      font-size: 1.5em;
-      margin: 0;
-    }
-
-   .services__container {
-      display: flex;
-      flex-direction: column;
-      height: 100vh;
-      width: 100%;
-
-      .services__card {
-         height: 100%;
-         width: 100%;
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        margin: 0;
-        
-        h2{
-         height: 100%;
-         width: 100%;
-         font-size: 1.3em;
-         text-align: center;
-         margin: 0;
-        }
-        p{
-         height: 100%;
-         width: 100%;
-      }
-
-   }
-
-      h2 {
-        margin: 0;
-        font-size: 2em;
-      }
-    }
+    margin-left: 2rem;
   }
-}
-.footer__container{
-   height: 100%;
-   width: 100%;
-   flex-direction: column;
-   padding: 0;
 
-   .footer__links{
-      flex-direction: column;
-      height: 100%;
-      width: 100%;
+  .footer__link--wrapper {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 100%;
+  }
 
-      .footer__link--wrapper{
-         flex-direction: row;
-         flex-wrap: nowrap;
-         height: 100%;
+  .footer__link--items {
+    height: 100%;
+    width: 100%;
+  }
 
-         p{
-            font-size: 0.5em;
+  .footer__link--items h2 {
+    font-size: 0.5em;
+  }
 
-         }
-         .footer__link--items{
+  .social__media {
+    flex-direction: column;
+  }
 
-            height: 100%;
-            width: 100%;
-
-            h2{
-            font-size: 0.5em;
-
-            }
-         }
-      }
-   }
-   .social__media{
-      flex-direction: column;
-
-      .social__media--wrap{
-         flex-direction: column;
-         gap: 20px;
-
-      }
-
-
-   }
-
+  .social__media--wrap {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 
 @media screen and (max-width: 770px) {
+  html {
+    overflow-x: hidden;
+  }
 
-html {
-   overflow-x: hidden;
-   }
-   .services__container {
-      padding: 50px 0;
-   }
-   .footer__container{
-      padding-top: 100px;
-   }
+  .services__container {
+    padding: 50px 0;
+  }
 
-
+  .footer__container {
+    padding-top: 100px;
+  }
 }

@@ -1,0 +1,162 @@
+@media screen and (max-width: 420px) {
+  html {
+    overflow-x: hidden;
+  }
+  body {
+    overflow-x: hidden;
+  }
+
+  .navbar{
+   position: static;
+   margin: 0;
+  }
+
+  .navbar__container {
+    margin-top: 30px;
+    width: 100%;
+    height: 150%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: static;
+    flex-wrap: nowrap;
+    z-index: 0;
+    padding: 0;
+  }
+  .navbar__btn a {
+    font-size: 0.9em;
+  }
+
+  .main__container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 0;
+    padding-top: 100px;
+
+    .main__content {
+      padding: 30px 30px;
+
+      h1 {
+        font-size: 2em;
+      }
+      h2 {
+        font-size: 1.3em;
+      }
+      p {
+        font-size: 1em;
+      }
+    }
+    .main__img {
+      display: block;
+      width: 50%;
+      height: 50%;
+    }
+  }
+  .services {
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+
+    h1 {
+      font-size: 1.5em;
+      margin: 0;
+    }
+
+   .services__container {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      width: 100%;
+
+      .services__card {
+         height: 100%;
+         width: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin: 0;
+        
+        h2{
+         height: 100%;
+         width: 100%;
+         font-size: 1.3em;
+         text-align: center;
+         margin: 0;
+        }
+        p{
+         height: 100%;
+         width: 100%;
+      }
+
+   }
+
+      h2 {
+        margin: 0;
+        font-size: 2em;
+      }
+    }
+  }
+}
+.footer__container{
+   height: 100%;
+   width: 100%;
+   flex-direction: column;
+   padding: 0;
+
+   .footer__links{
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+
+      .footer__link--wrapper{
+         flex-direction: row;
+         flex-wrap: nowrap;
+         height: 100%;
+
+         p{
+            font-size: 0.5em;
+
+         }
+         .footer__link--items{
+
+            height: 100%;
+            width: 100%;
+
+            h2{
+            font-size: 0.5em;
+
+            }
+         }
+      }
+   }
+   .social__media{
+      flex-direction: column;
+
+      .social__media--wrap{
+         flex-direction: column;
+         gap: 20px;
+
+      }
+
+
+   }
+
+}
+
+@media screen and (max-width: 770px) {
+
+html {
+   overflow-x: hidden;
+   }
+   .services__container {
+      padding: 50px 0;
+   }
+   .footer__container{
+      padding-top: 100px;
+   }
+
+
+}

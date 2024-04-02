@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+
+.box {
+  position: relative;
+  width: 10rem;
+  height: 10rem;
+  background-color: #ff7f50;
+  position: relative;
+  overflow: hidden;
+}
+@keyframes fill {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes refill {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+.box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: violet;
+  animation: fill 2s forwards;
+}
+.box:hover::before {
+  content: "";
+  animation: refill 1s backwards;
+}

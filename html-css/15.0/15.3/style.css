@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: aliceblue;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.grid__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 1rem;
+  grid-template-areas:
+    "header header header header"
+    "side--1 content content side--2"
+    "footer footer footer footer";
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 15rem;
+  height: 50%;
+  width: 100%;
+}
+.grid__box {
+  padding: 1rem;
+  border-radius: 1rem;
+  height: 100%;
+  width: 100%;
+}
+.one {
+  grid-area: header;
+  background-color: #c1224f;
+}
+.two {
+  grid-area: side--1;
+  background-color: #f16f6f;
+}
+.three {
+  grid-area: content;
+  background-color: #94d2e6;
+}
+.four {
+  grid-area: side--2;
+  background-color: #fff78f;
+}
+.five {
+  grid-area: footer;
+  background-color: #337357;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .grid__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1rem;
+    grid-template-areas:
+      "header header header header"
+      "side--1 content content content"
+      "side--2 side--2 side--2 side--2"
+      "footer footer footer footer";
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 3rem;
+    height: 50%;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .grid__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1rem;
+    grid-template-areas:
+      "header header header header"
+      "side--1 side--1 side--1 side--1"
+      "content content content content"
+      "side--2 side--2 side--2 side--2"
+      "footer footer footer footer";
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 3rem;
+    height: 50%;
+    width: 100%;
+  }
+}

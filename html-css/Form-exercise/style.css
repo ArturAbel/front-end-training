@@ -1,0 +1,203 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
+body {
+  width: 100vw;
+  height: 120vw;
+  display: flex;
+  justify-content: center;
+  padding: 10rem;
+}
+
+.card {
+  width: 363px;
+  height: 828px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__signup__links {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem 0;
+  align-items: center;
+}
+
+.Card__google__account {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: rgb(181, 181, 181);
+  display: flex;
+  align-self: center;
+  border-radius: 50%;
+}
+
+.card__signup__links__header {
+  font-weight: 500;
+  font-size: 2rem;
+}
+.card__signup__links__btn {
+  background-color: transparent;
+  border: solid 1px black;
+  border-radius: 10%/50%;
+  width: 70%;
+  padding: 1rem;
+  display: block;
+}
+.fa-facebook {
+  color: #0e82ee;
+  margin-right: 2rem;
+}
+.fa-google {
+  color: #34a852;
+  margin-right: 2rem;
+}
+.fa-twitter {
+  color: #46acdf;
+  margin-right: 2rem;
+}
+
+.card__signup__links__divider {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.card__signup__links div p {
+  border-bottom: none;
+  align-items: end;
+  font-size: larger;
+}
+
+.card__mid {
+  padding: 2rem 3rem;
+  height: 100%;
+  gap: 0.5rem;
+}
+
+.card__mid__header {
+  text-align: center;
+  font-weight: 600;
+}
+
+.card__mid__form label {
+  width: 100%;
+}
+.card__mid__form input {
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+}
+
+.pass__info {
+  font-size: 0.8rem;
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+}
+
+.card__mid__form__radio {
+  display: flex;
+  justify-content: left;
+  text-align: left;
+  font-size: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+.card__mid__form__radio input {
+  padding: auto;
+  width: 1rem;
+  height: 1rem;
+  margin: 0 0.5rem;
+}
+label[for="female"],
+label[for="male"],
+label[for="none-binary"] {
+  max-width: 50px;
+}
+
+label[for="birth_date"] {
+  margin-top: 1rem;
+}
+
+.card__mid__form__birth {
+  display: flex;
+  justify-content: space-between;
+}
+
+select[name="select_month"],
+select[name="select_date"],
+select[name="select_year"] {
+  width: 9rem;
+  border-radius: 15%;
+  height: 3rem;
+  border: solid 1px #e1e1e1;
+}
+
+.card__checkbox {
+  display: flex;
+  margin-top: 1rem;
+}
+input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  margin: 0.5rem;
+}
+.disclaimer {
+  margin-top: 1rem;
+  font-size: smaller;
+}
+
+.btn__robot {
+  margin: 1.5rem 0;
+  background-color: transparent;
+  width: 20rem;
+  height: 4rem;
+  border-radius: 7%/50%;
+  border: solid 1px black;
+  font-size: 1rem;
+  padding: 0 2rem;
+  position: relative;
+  text-align: start;
+}
+
+.snapcha__image {
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+  position: absolute;
+  right: 1rem;
+  top: 0;
+}
+
+.btn__sign {
+  width: 90%;
+  height: 4rem;
+  border-radius: 6%/50%;
+  margin: 0 3rem 1rem 0;
+  color: white;
+  border: none;
+  background-color: #c3c3c3;
+}
+
+#grey-divider {
+  border-bottom: solid 1px grey;
+  width: 12rem;
+}
+#link {
+  text-decoration: underline;
+}
+#grey-bottom-line {
+  margin-top: 2rem;
+  margin-left: 6rem;
+  width: 50%;
+  height: 0.8rem;
+  border-radius: 3%/50%;
+  background-color: #c3c3c3;
+}

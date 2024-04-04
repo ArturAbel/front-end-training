@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/html-css/Form-exercise/reset.css" />
+    <script
+      src="https://kit.fontawesome.com/da5dd21fe5.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Form Exercise</title>
+  </head>
+  <body>
+    <main class="card">
+      <div class="card__signup__links">
+        <a class="Card__google__account" href="#"></a>
+        <h2 class="card__signup__links__header">
+          Sign up fo free to start live-streaming
+        </h2>
+        <button class="card__signup__links__btn">
+          <i class="fa-brands fa-facebook fa-xl facebook"></i>Sign up with
+          Facebook
+        </button>
+        <button class="card__signup__links__btn">
+          <i class="fa-brands fa-google fa-xl"></i>Sign up with Google
+        </button>
+        <button class="card__signup__links__btn">
+          <i class="fa-brands fa-twitter fa-xl"></i>Sign up with Twitter
+        </button>
+        <div class="card__signup__links__divider">
+          <div id="grey-divider"></div>
+          <p>OR</p>
+          <div id="grey-divider"></div>
+        </div>
+      </div>
+      <div class="card__mid">
+        <p class="card__mid__header">Sign up with your email address</p>
+        <form class="card__mid__form" action="">
+          <label for="name">Profile name</label><br />
+          <input type="text" placeholder="  Enter your profile name" /><br />
+          <label for="email">Email</label><br />
+          <input type="text" placeholder="  Enter your email address" /><br />
+          <label for="password">Password:</label><br />
+          <input type="text" placeholder="  Enter your password" /><br />
+          <p class="pass__info">
+            Use 8 or more characters with a mix of letters, numbers & symbols
+          </p>
+          <label for="gender">What's your gender: (optional)</label><br />
+          <div class="card__mid__form__radio">
+            <input type="radio" /><br />
+            <label for="female">Female</label><br />
+            <input type="radio" /><br />
+            <label for="male">Male</label><br />
+            <input type="radio" /><br />
+            <label for="none-binary">None-binary</label><br />
+          </div>
+          <label for="birth_date">What's your date of birth:</label><br />
+          <div class="card__mid__form__birth">
+            <div>
+              <label for="month">Month</label><br />
+              <select name="select_month" id=""></select>
+            </div>
+            <div>
+              <label for="date">Date</label><br />
+              <select name="select_date" id=""></select>
+            </div>
+            <div>
+              <label for="year">Year</label><br />
+              <select name="select_year" id=""></select>
+            </div>
+          </div>
+          <div class="card__checkbox">
+            <input type="checkbox" checked="checked" />
+            <p>
+              Share my registration data with our content providers for
+              marketing purposes.
+            </p>
+          </div>
+          <p class="disclaimer">
+            By creating an account, you agree to the
+            <span id="link">terms of use</span> and
+            <span id="link">Privacy policy</span>.
+          </p>
+          <div>
+            <button class="btn__robot">
+              <input type="checkbox" checked="checked" />I'm not a robot
+              <img class="snapcha__image" src="icons/captcha.png" alt="" />
+            </button>
+          </div>
+          <button class="btn__sign">Sign up</button>
+          <p>Already have an account? <span id="link">Log in</span></p>
+          <div id="grey-bottom-line"></div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

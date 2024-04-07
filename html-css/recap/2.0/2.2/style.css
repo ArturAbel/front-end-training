@@ -1,0 +1,81 @@
+*{
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+}
+
+body{
+   width: 100vw;
+   height: 100vh;
+   background-color: #E0E1E9;
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 0.8rem;
+   text-align: center;
+}
+.flex__container{
+   height: 100vh;
+   width: 100vw;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 2rem;
+}
+
+.card{
+   width: 10rem;
+   height: 10rem;
+   align-content: center;
+}
+
+.gradient__border{
+   background-color: transparent;
+   border-image: linear-gradient(#C9E4E7, #B4A0E5, #CAFFD0) 10;
+   border-style: solid;
+   border-width: 1rem;
+}
+
+.animated__border{
+   border: 0.5rem dashed #B4A0E5;
+   background-color: transparent;
+   animation: spin 5s linear infinite ;
+}
+
+@keyframes spin{
+   100%{transform: rotate(360deg);}
+}
+.shape__border{
+   background-color: transparent;
+   position: relative;
+}
+.shape__border::before{
+   content: "";
+  position: absolute;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   z-index: -1;
+   transform: rotate(45deg);
+   background-color: #C9E4E7;
+}
+
+.ants__border{
+
+   border-radius: 5%;
+   background: transparent;
+   position: relative;
+   animation: fade 0.8s  infinite;
+}
+
+@keyframes fade {
+   0%{border: 2px solid #E9FF70;
+      border-radius: 5%;
+   }
+   50%{ box-shadow: inset 0 2px 4px rgb(0, 0, 0);
+   }
+   100%{   border: 8px double #E9FF70;
+      border-radius: 5%;
+
+   }
+}
+

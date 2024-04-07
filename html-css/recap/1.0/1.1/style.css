@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: transparent;
+  width: 100vw;
+  height: 100vh;
+}
+
+.solar-system {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  z-index: -5;
+}
+
+.sun {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: rgb(215, 206, 25);
+}
+.mercury {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: tomato;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+}
+.venus {
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: rgb(40, 219, 255);
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 80%;
+}
+
+/* Ids */
+#mercury-orbit {
+  width: 9rem;
+  height: 4rem;
+  border: dashed 1px #5b5b5b;
+  background-color: transparent;
+  position: absolute;
+  z-index: -1;
+  border-radius: 45%;
+  animation: rotate 3s linear forwards infinite;
+}
+#venus-orbit {
+  width: 11rem;
+  height: 6rem;
+  border: dashed 1px #5b5b5b;
+  background-color: transparent;
+  position: absolute;
+  z-index: -2;
+  border-radius: 45%;
+  transform: rotate(45deg);
+  animation: rotate 4s linear forwards infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

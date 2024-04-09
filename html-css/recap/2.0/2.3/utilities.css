@@ -1,0 +1,13 @@
+
+
+.planet{
+   border-radius: 50%;
+   position: absolute;
+}
+
+.orbit{
+   position: absolute;
+   border: dashed 1px #5b5b5b;
+   border-radius: 50%;  
+}
+

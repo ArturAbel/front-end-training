@@ -1,0 +1,142 @@
+* {
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+ }
+ 
+ body {
+   width: 100vw;
+   height: 100vh;
+ }
+
+ .solar__system{
+   background-color: black;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100vw;
+   height: 100vh;
+   position: relative;
+
+ }
+
+ /* Planets */
+ .sun {
+   width: 5rem;
+   height: 5rem;
+   border-radius: 50%;
+   background-color: rgb(215, 206, 25);
+ }
+ .mercury {
+   width: 0.5rem;
+   height: 0.5rem;
+   background-color: tomato;
+   top: 1rem;
+   left: 1rem;
+ }
+ .venus {
+   width: 0.8rem;
+   height: 0.8rem;
+   background-color: rgb(40, 219, 255);
+   top: 1.1rem;
+   left: 1.1rem;
+ }
+ .earth {
+  width: 0.8rem;
+  height: 0.8rem;
+  background: linear-gradient(271deg, #3ca210,#343fdf,#9bf056);
+  top: 1.5rem;
+  left: 1.5rem;
+}
+.mars {
+  width: 0.5rem;
+  height: 0.5rem;
+  background: linear-gradient(271deg, #ff2600,#f88000,#f05656);
+  top: 1.9rem;
+  left: 1.9rem;
+}
+.jupiter{
+  width: 1.2rem;
+  height: 1.2rem;
+  background: linear-gradient(271deg, #818181,#ff847d,#aeaeae);
+  top: 1.9rem;
+  left: 1.9rem;
+}
+.saturn{
+  width: 1rem;
+  height: 1rem;
+  background: linear-gradient(271deg, #18f0ff,#e5ff1e,#29f8ff);
+  top: 3rem;
+  left: 3rem;
+  position: relative;  
+}
+.saturn::before{
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  position: absolute;
+  top: -0.5rem;
+  bottom: 0;
+  left: -0.5rem;
+  right: 0;
+  border: 1px solid white;
+}
+.saturn::after{
+  content: "";
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  position: absolute;
+  top: -0.75rem;
+  bottom: 0;
+  left: -0.75rem;
+  right: 0;
+  border: 1px solid white;
+}
+
+/* Orbits */
+ .orbit__mercury{
+   width: 8rem;
+   height: 8rem;
+   animation: 3s rotate linear forwards infinite;
+
+ }
+ .orbit__venus{
+   width: 11rem;
+   height: 11rem;
+   animation: 3.5s rotate linear forwards infinite;
+ }
+ .orbit__earth{
+  width: 14rem;
+  height: 14rem;
+  animation: 4.5s rotate linear forwards infinite;
+}
+.orbit__mars{
+  width: 16rem;
+  height: 16rem;
+  animation: 6.5s rotate linear forwards infinite;
+}
+.orbit__jupiter{
+  width: 19rem;
+  height: 19rem;
+  animation: 10s rotate linear forwards infinite;
+}
+.orbit__saturn{
+  width: 24rem;
+  height: 24rem;
+  animation: 11.5s rotate linear forwards infinite;
+}
+
+
+
+ @keyframes rotate {
+  0% {
+     transform: rotate(0deg);
+  }
+  100% {
+     transform: rotate(360deg);
+  }
+}
+  
+

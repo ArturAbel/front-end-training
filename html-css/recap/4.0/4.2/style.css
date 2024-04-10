@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #afd198;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dog {
+  position: relative;
+}
+.head {
+  width: 150px;
+  height: 80px;
+  border-radius: 0px 190px 80px 190px;
+  background-color: #ecca9c;
+  position: absolute;
+  bottom: 8.7rem;
+  right: 12.7rem;
+}
+.nose {
+  width: 20px;
+  height: 10px;
+  border-radius: 0px 0px 190px 190px;
+  background-color: black;
+  position: absolute;
+  left: -0.5rem;
+}
+.head__top {
+  width: 90px;
+  height: 70px;
+  border-radius: 0px 0px 80px 147px;
+  background-color: #dba979;
+  position: absolute;
+  left: 4rem;
+}
+.ear__left {
+  width: 30px;
+  height: 80px;
+  border-radius: 190px 0px 0px 190px;
+  position: absolute;
+  z-index: -1;
+  background-color: #ecca9c;
+  top: -3em;
+  left: 6rem;
+}
+.ear__right {
+  border-radius: 190px 0px 0px 190px;
+  width: 30px;
+  height: 80px;
+  position: absolute;
+  background-color: #dba979;
+  top: -3em;
+  left: 7.7rem;
+}
+.eye {
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 0.5rem;
+  left: 4.5rem;
+}
+.collar {
+  width: 100px;
+  height: 20px;
+  background-color: black;
+}
+.body {
+  background-color: #ecca9c;
+  width: 300px;
+  height: 120px;
+  border-radius: 0px 190px 38px 182px;
+}
+.tail {
+  border-radius: 190px 0px 0px 190px;
+  width: 30px;
+  height: 140px;
+  position: absolute;
+  z-index: -1;
+  background-color: #dba979;
+  top: -2em;
+  left: 16.5rem;
+}
+.left__forward__leg {
+  position: absolute;
+  width: 50px;
+  height: 120px;
+  border-radius: 0px 0px 0px 190px;
+  background-color: #ecca9c;
+  left: 4rem;
+  top: 4rem;
+}
+.right__forward__leg {
+  position: absolute;
+  z-index: -1;
+  width: 50px;
+  height: 120px;
+  border-radius: 0px 0px 0px 190px;
+  background-color: #dba979;
+  left: 2rem;
+  top: 4rem;
+}
+.left__forward__paw {
+  position: absolute;
+  width: 50px;
+  height: 20px;
+  border-radius: 190px 190px 0px 0px;
+  left: 4rem;
+  top: 10.5rem;
+  background-color: #ecca9c;
+}
+.right__forward__paw {
+  position: absolute;
+  z-index: -1;
+  width: 50px;
+  height: 20px;
+  border-radius: 190px 190px 0px 0px;
+  left: 2rem;
+  top: 10rem;
+  background-color: #dba979;
+}
+.left__back__leg {
+  position: absolute;
+  width: 70px;
+  height: 80px;
+  border-radius: 0px 0px 0px 190px;
+  background-color: #ecca9c;
+  left: 14.3rem;
+  top: 6.5rem;
+}
+.right__back__leg {
+  position: absolute;
+  z-index: -1;
+  width: 70px;
+  height: 80px;
+  border-radius: 0px 0px 0px 190px;
+  background-color: #dba979;
+  left: 12.3rem;
+  top: 6.5rem;
+}
+.left__back__paw {
+  position: absolute;
+  width: 50px;
+  height: 20px;
+  border-radius: 190px 190px 0px 0px;
+  left: 15.5rem;
+  top: 10.5rem;
+  background-color: #ecca9c;
+}
+.right__back__paw {
+  position: absolute;
+  z-index: -1;
+  width: 50px;
+  height: 20px;
+  border-radius: 190px 190px 0px 0px;
+  left: 13.5rem;
+  top: 10.5rem;
+  background-color: #dba979;
+}
+
+.dog:hover div {
+  background-color: #afd198;
+  transition: 1s;
+}

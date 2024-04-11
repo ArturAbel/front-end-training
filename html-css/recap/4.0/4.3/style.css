@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(42, 42, 42);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spaceship {
+  width: 10rem;
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.spaceship__body {
+  width: 5rem;
+  height: 13rem;
+  background-color: aliceblue;
+  border-radius: 50% 50% 51% 49% / 100% 100% 0% 0%;
+}
+
+.window {
+  position: absolute;
+  top: 7rem;
+  left: 4rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 1px solid rgb(87, 87, 87);
+  background-color: #93cdff;
+}
+
+.fin__left {
+  position: absolute;
+  top: 14rem;
+  left: 0;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 0 0 3rem 3rem;
+  border-color: transparent transparent aliceblue transparent;
+}
+.fin__right {
+  position: absolute;
+  top: 14rem;
+  left: 7rem;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 3rem 3rem;
+  border-color: transparent transparent aliceblue transparent;
+  transform: rotate(90deg);
+}
+.fin__center {
+  position: absolute;
+  top: 15rem;
+  left: 4.5rem;
+  width: 1rem;
+  height: 3rem;
+  background-color: aliceblue;
+  border-style: solid;
+  border-width: 1px 1px 0 1px;
+  border-color: black;
+}
+.fire {
+  position: absolute;
+  top: 14rem;
+  left: 3.7rem;
+  z-index: -1;
+  width: 2.5rem;
+  height: 3rem;
+  background-color: rgb(183, 0, 0);
+  animation: fire 5s ease-in infinite;
+}
+@keyframes fire {
+  50% {
+    filter: brightness(12);
+    transform: scaleY(1.7);
+    opacity: 0.6;
+  }
+  100% {
+    filter: brightness(1);
+    transform: scaleY(0rem);
+  }
+}

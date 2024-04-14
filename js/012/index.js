@@ -40,3 +40,13 @@ console.log(`----------------8------------------`);
 const nullNumber = null;
 const nullToNumber = +nullNumber;
 console.log(`${nullToNumber} ${typeof nullToNumber}`);
+
+
+//  String Concentration 
+
+console.log(`----------------1------------------`);
+const name = `Artur`;
+const age = 33;
+console.log(`My name is ${name} and i am ${age} years old.`);
+
+/* For the next exercises please check folder 005, thank you*/

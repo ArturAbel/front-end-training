@@ -50,3 +50,7 @@ const age = 33;
 console.log(`My name is ${name} and i am ${age} years old.`);
 
 /* For the next exercises please check folder 005, thank you*/
+
+let artur = `artur`;
+artur = artur.slice(2).replace("r","k");
+console.log(`${artur}`);

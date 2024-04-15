@@ -91,4 +91,4 @@ const person1Height = 170;
 const person2Height = 165;
 (person1Height === person2Height)&&console.log(`The height is the same.`);
 (person1Height > person2Height)&&console.log(`The person is higher.`);
-(person1Height< person2Height)&&console.log(`The person is shorter`);
+(person1Height < person2Height)&&console.log(`The person is shorter`);

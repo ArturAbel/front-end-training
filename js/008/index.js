@@ -122,3 +122,10 @@ for (let j = 0; j < lastArray.length; j++) {
       console.log(`The number ${lastArray[j]} is not correct.`);
    }
 }
+
+
+let user = false;
+
+if (!user) {
+   console.log(`\nThis is false`);
+}

@@ -224,8 +224,3 @@ switch (updateMonth) {
       console.log(`Invalid`);
    break;
 }
-
-
-
-const destinationName = 'Famous Israel';
-console.log(destinationName.search('famous') > -1 || destinationName.search('top destination') > -1 ? 'This is destination is a hot spot' : 'This is destination is not a hot spot');

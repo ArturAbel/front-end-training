@@ -73,9 +73,9 @@ for (let i = 0; i < questChallenges6.length; i++) {
 console.log(`--------------------7---------------------\n`);
 
 const questRewards7 = [50, 100, 75, 150];
-let maxReward = 0 , maxRewardIndex = null;
+let maxReward = questRewards7[0] , maxRewardIndex = null;
 
-for (let i = 0; i < questRewards7.length; i++) {
+for (let i = 1; i < questRewards7.length; i++) {
 
    if (questRewards7[i] > maxReward ) {
       maxReward = questRewards7[i];

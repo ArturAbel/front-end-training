@@ -6,7 +6,7 @@ const grid = [
    [areaMark,areaMark,areaMark],
    [areaMark,areaMark,areaMark],
    [areaMark,areaMark,areaMark]];
-let direction = null;
+let direction = null;   
 
 
 grid[1][1] = playerMark;
@@ -68,6 +68,7 @@ function move(grid, direction) {
                      }  
                      break;
                   default:
+                     console.log(`Invalid move.`);
                   break;
                 }
            }

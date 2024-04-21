@@ -11,17 +11,17 @@ while (playerHP > 0 && enemyHP > 0) {
    
    if (playerTurn === true) {
       enemyHP -= attack(diceSides, playerTurn);
-      console.log(`The enemy has ${enemyHP} left.`);
+      console.log(`The enemy has ${enemyHP}HP.`);
       playerTurn = false;
    }
 
    else{
       playerHP -=  attack(diceSides, playerTurn);
-      console.log(`The player has ${playerHP} left.`);
+      console.log(`The player has ${playerHP}HP.`);
       playerTurn = true;
    }
 }
-endGame(playerHP,enemyHP);
+endGame(playerHP);
 
 
  function dice(diceSides) {
@@ -71,7 +71,7 @@ function attack(diceSides, playerTurn) {
    return attackPower;
 }
 
-function endGame(playerHP,enemyHP) {
+function endGame(playerHP) {
    if (playerHP < 0) {
       console.log(`\nYou lost ---- RIP`);
    }

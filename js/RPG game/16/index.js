@@ -137,21 +137,61 @@ console.log(calculateAverageRating(ratingArray));
 
 console.log(`\n2.\n`);
 
+const gameNamesArray = 
+['The Legend of Zelda: Breath of the Wild (2017) - Developed by Nintendo', 
+'Final Fantasy VII (1997) - Developed by Square Enix', 
+'Halo: Combat Evolved (2001) - Developed by Bungie'];
 
-function extractDeveloperNames(params) {
-   
+extractDeveloperNames(gameNamesArray);
+
+function extractDeveloperNames(array) {
+
+   let developersArray = [];
+
+   for (let i = 0; i < array.length; i++) {
+      let developerName = array[i].split(`Developed by`)[1];
+      developersArray.push(developerName);
+   }
+      console.log(developersArray);
 }
 
+//------------------------------------------------------
 
-// Input Example: ['The Legend of Zelda: Breath of the Wild (2017) - Developed by Nintendo', 'Final Fantasy VII (1997) - Developed by Square Enix', 'Halo: Combat Evolved (2001) - Developed by Bungie']
+console.log(`\n3.\n`);
 
-// 3. Check if a Game Title Contains a Specific Word
-// Input: ('Final Fantasy VII', 'Fantasy')
+const gameTitle = 'Final Fantasy VII'; 
+const keyWord =  'Fantasy';
 
-// 4. Check if All Game Titles Start with the Same Letter
-// Input: ['Assassin's Creed', 'Age of Empires', 'Animal Crossing']
+console.log(containsWordInTitle(gameTitle,keyWord));
 
-// 5. Concatenate All Game Genres into a Single String
+function containsWordInTitle(gameTitle, keyWord) {
+   return gameTitle.includes(keyWord);
+}
+
+//------------------------------------------------------
+
+console.log(`\n4.\n`);
+
+const gameTitles = ['Assassins Creed','Age of Empires','Animal Crossing'];
+console.log(allTitlesStartWithSameLetter(gameTitles));
+
+function allTitlesStartWithSameLetter(gameArray) {
+   const index = gameArray[0].charAt(0);
+   let flag = true;
+
+   for (const game of gameArray) {
+      if (game.charAt(0) !== index) {
+         flag = false;
+         break;
+      }
+   }
+   return flag;
+}
+
+//------------------------------------------------------
+
+console.log(`\n5.\n`);
+
 // Input: ['RPG', 'Action', 'Adventure']
 
 // 6. Count Battles in XP Range

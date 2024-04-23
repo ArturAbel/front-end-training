@@ -192,27 +192,148 @@ function allTitlesStartWithSameLetter(gameArray) {
 
 console.log(`\n5.\n`);
 
-// Input: ['RPG', 'Action', 'Adventure']
 
-// 6. Count Battles in XP Range
-// Input: ([50, 75, 100, 30, 20, 100], 75, 100)
+const genresArray = ['RPG', 'Action', 'Adventure'];
+console.log(concatenateGenres(genresArray));
 
-// 7. Find Games Developed by a Specific Developer
-// Input Example: ['The Legend of Zelda', 'Final Fantasy', 'Halo: Combat Evolved'], ['Nintendo', 'Square Enix', 'Bungie'], 'Nintendo'
+function concatenateGenres(array) {
+   let concatenatedToString = '';
 
-// 8. Capitalize the First Letter of Each Game Title
-// Input: ['the legend of zelda', 'final fantasy', 'halo: combat evolved']
+   for (const genre of array) {
+      console.log(array.length -1);
+      console.log(array[array.length -1]);
 
-// 9. Filter Unique XP Values
-// Input: [100, 50, 75, 50, 100, 75, 100]
+      concatenatedToString += genre;
+      if (genre !== array[array.length - 1]) {
+         concatenatedToString += `, `;
+      }
+   }   
+   return concatenatedToString;
+}
 
-// 10. Sort Game Titles Alphabetically
-// Input: ['The Legend of Zelda', 'Final Fantasy', 'Halo: Combat Evolved']
+//------------------------------------------------------
 
-// 11. Filter XP by Multiple Criteria
-// Input: ([10, 20, 30, 40, 50], greaterThan=20, lessThan=50)
+console.log(`\n6.\n`);
+
+
+const xpArray = [50, 75, 100, 30, 20, 100];
+console.log(countInXpRange(xpArray, 75, 100));
+
+function countInXpRange(array, lowerXP, upperXP) {
+   let counter = 0;
+   for (const xpAmount of array) {
+      if (xpAmount <= upperXP && xpAmount >= lowerXP ) {
+         counter++;
+      }
+   }
+   return counter;
+}
+
+
+
+
+//------------------------------------------------------
+
+console.log(`\n7.\n`);
+
+
+const gameTitles2 = ['The Legend of Zelda', 'Final Fantasy', 'Halo: Combat Evolved'];
+const gameDevelopers =  ['Nintendo', 'Square Enix', 'Bungie'];
+const index = 'Nintendo';
+console.log(findGamesByDeveloper(gameTitles2, gameDevelopers, index));
+
+function findGamesByDeveloper(gameTitles, developersArray, index) {
+   const filteredGameDevelopers = [];
+   for (let i = 0; i < developersArray.length; i++) {
+      if (gameDevelopers[i].includes(index)) {
+         filteredGameDevelopers.push(gameTitles[i]);
+      }
+   }
+   return filteredGameDevelopers;
+}
+
+
+//------------------------------------------------------
+
+console.log(`\n8.\n`);
+
+const lowerCaseArray = ['the legend of zelda', 'final fantasy', 'halo: combat evolved'];
+const capitalizedArray = capitalizeFirstLetter(lowerCaseArray);
+
+console.log(`Original array:`,lowerCaseArray);
+console.log(`New array:`, capitalizedArray);
+
+function capitalizeFirstLetter(array) {
+   let  newArray = [];
+
+   for (const game of array) {
+      let slicedLetter = '';
+      slicedLetter = game.charAt(0).toUpperCase();
+      newArray.push(slicedLetter + game.slice(1));
+   }
+   return newArray;
+}
+
+
+//------------------------------------------------------
+
+console.log(`\n9.\n`);
+
+const arrayWithDuplicates = [100, 50, 75, 50, 100, 75, 100];
+const arrayWithoutDuplicates = uniqueXP(arrayWithDuplicates);
+console.log(`With duplicates:`,arrayWithDuplicates);
+console.log(`Without duplicates:`,arrayWithoutDuplicates);
+
+function uniqueXP(array) {
+
+   let uniqueXpArray = [];
+   for (const xpNumber of array) {
+      if (uniqueXpArray.includes(xpNumber) === false) {
+         uniqueXpArray.push(xpNumber);
+      }
+   }
+   return uniqueXpArray;
+}
+
+//------------------------------------------------------
+
+console.log(`\n10.\n`);
+
+const unsortedGameTitles = ['The Legend of Zelda', 'Final Fantasy', 'Halo: Combat Evolved'];
+const sortedGameTitles = sortTitlesAlphabetically(unsortedGameTitles);
+console.log(`Unsorted:`,unsortedGameTitles);
+console.log(`Sorted:`,sortedGameTitles);
+
+
+function sortTitlesAlphabetically(array) {
+   array = array.concat();
+   return array.sort();
+}
+
+//------------------------------------------------------
+
+console.log(`\n11.\n`);
+
+const xpRangeArray = [10, 20, 30, 40, 50];
+const narrowedXPArray = filterXPByCriteria(xpRangeArray, 20, 50)
+console.log(narrowedXPArray);
+
+function filterXPByCriteria(array, greaterThen, lessThen) {
+   let newArray = [];
+
+   for (const xpNumber of array) {
+      if (xpNumber > greaterThen && xpNumber < lessThen) {
+         newArray.push(xpNumber);
+      }
+   }
+   return newArray;
+}
 
 // Bonus Exercises
+
+//------------------------------------------------------
+
+console.log(`\n1.\n`);
 
 // 1. Sort Experience Points
 // Input: [100, 50, 75, 25, 10]

@@ -34,7 +34,17 @@ console.log(`Sorted:`,sortArray.sort((a, b) => {
  }));
 
 
-
+ console.log(`\n`);
+// Check if Pangram
+function isPangram(sentence) {
+   let lowerCased = sentence.toLowerCase();
+   for (const char of `abcdefghijklmnopqrstuvwxyz`) {
+      if (!lowerCased.includes(char)) {
+         return false;
+      }
+   }
+   return true;
+}
 
 
 

@@ -68,8 +68,10 @@ function removeCharacterState(characterName){
    for (let i = 0; i < characterStates.length; i++) {
       if (characterStates[i].includes(characterName)) {
          characterStates.splice(i,1);
+         return;
       }
    }
+   console.log(`Name not found`);
 }
 
 removeCharacterState("Troll");
@@ -81,7 +83,7 @@ console.log(`\n6.\n`);
 
 function listCharacters(){
    for (let i = 0; i < characterStates.length; i++) {
-      console.log(`${i+1}. Character's name "${characterStates[i][0]}" - strength ${characterStates[i][1]}\n`);      
+      console.log(`${i+1}. Character's name "${characterStates[i][0]} - strength ${characterStates[i][1]}"\n`);      
    }
 }
 listCharacters();
@@ -107,7 +109,7 @@ function strongestCharacter(){
 
    for (let i = 1; i < characterStates.length; i++) {
     
-      if (characterStates[i][1] > highestPowerCharacter[1]) {
+      if (characterStates[i][1] > highestPowerCharacter[1]) { 
          highestPowerCharacter[0] = characterStates[i][0];
          highestPowerCharacter[1] = characterStates[i][1];       
       }

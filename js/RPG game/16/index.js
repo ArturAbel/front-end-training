@@ -335,11 +335,66 @@ function filterXPByCriteria(array, greaterThen, lessThen) {
 
 console.log(`\n1.\n`);
 
-// 1. Sort Experience Points
-// Input: [100, 50, 75, 25, 10]
+const unsortedXPArray =  [100, 50, 75, 25, 10];
+const sortedXPArray = sortXP(unsortedXPArray);
+console.log(sortedXPArray);
 
-// 2. Average XP of Top N Battles
-// Input: ([50, 10, 100, 75, 25], 3)
+function sortXP(array) {
+   for (let i = 0; i < array.length; i++) {
+      let temp = 0;
+      for (let j = i + 1; j < array.length; j++) {
+         if (array[i] > array[j]) {
+            temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+         }         
+      }    
+   }
+   return array;
+}
 
-// 3. Normalize Experience Points
-// Input: ([0, 25, 50, 75, 100], 0, 10)
+
+//------------------------------------------------------
+
+console.log(`\n2.\n`);
+
+const xpPointsArray = [50, 10, 100, 75, 25];
+const N = 3;
+const xpPointsArrayOfN = averageOfTopNXP(xpPointsArray, N);
+
+console.log(xpPointsArrayOfN);
+
+function averageOfTopNXP(array, N) {
+   let averageOfN = 0;
+   sortXP(array).reverse();
+
+   for (let i = 0; i < N; i++) {
+      averageOfN += array[i];
+   }
+   return averageOfN / N;
+}
+
+
+//------------------------------------------------------
+
+console.log(`\n3.\n`);
+
+
+const arrayToNormalize = [0, 25, 50, 75, 100];
+const max = 8, min = 2;
+
+console.log(normalizeXp(arrayToNormalize ,max, min));
+
+function normalizeXp(array, max, min){
+   const newArray = array;
+   sortXP(newArray);
+
+   const arrayMax = newArray[newArray.length - 1];
+   const arrayMin = newArray[0];
+
+   for (let i = 0; i < newArray.length; i++) {
+      newArray[i] = min + ((newArray[i] - arrayMin) / (arrayMax - arrayMin)) * (max - min);
+   }
+  return newArray;
+}
+

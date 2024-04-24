@@ -46,21 +46,3 @@ function isPangram(sentence) {
    return true;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

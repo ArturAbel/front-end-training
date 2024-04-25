@@ -26,25 +26,28 @@ function yourBooking(theater, sitNumber, yourSit, emptySit, bookedSit) {
    let potentialSit = [];
 
    if (theater[yourSitRow][yourSitCol] !== emptySit &&
-      ((twoSitOnLeft === bookedSit && sitOnLeft === emptySit ) || 
-      (twoSitOnRight === bookedSit && sitOnRight === emptySit ))) {
-         
-      let error = theater[yourSitRow][yourSitCol] !== emptySit?`The sit already booked.`:`Sorry, cannot book this sit.`;  
-      console.log(error);   
-
+      ((twoSitOnLeft !== bookedSit && sitOnLeft === emptySit ) || 
+      (twoSitOnRight !== bookedSit && sitOnRight === emptySit ))){
+      
+      let isFreeSeat = false;
+      let noSeat = theater[yourSitRow][yourSitCol] !== emptySit ? `\nThe seat is already booked.` : `\nSorry, cannot book this seat.`;  
+      console.log(noSeat);   
+      
          for (let i = 0; i < theater[0].length; i++) {
 
             if (theater[yourSitRow][i] === emptySit &&
                ((theater[yourSitRow][i - 2] !== bookedSit && theater[yourSitRow][i - 1] === emptySit ) || 
                (theater[yourSitRow][i + 2] !== bookedSit && theater[yourSitRow][i + 1] === emptySit ))) 
                potentialSit.push(i+1);
+               isFreeSeat = true;
          }
-         console.log(`You can try sit ${potentialSit}\n`);
+
+         isFreeSeat === true?console.log(`You can try sit ${potentialSit}\n`):console.log(`There are no free suitable sits`);
       }
 
    else {
       theater[yourSitRow][yourSitCol] = yourSit;
-      console.log(`You have booked successfully!\nYour sit is ${sitNumber[0]+1} on row number ${sitNumber[1]+1}`);
+      console.log(`\nYou have booked successfully! Your seat is ${sitNumber[1] + 1} in row number ${sitNumber[0] + 1}`);
    }
 }
 // To Cancel

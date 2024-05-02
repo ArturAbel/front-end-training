@@ -1,6 +1,3 @@
-// ----------------------------------------------------------
-console.log(`1.\n`);
-
 
 const gameWorld = {
 
@@ -18,17 +15,35 @@ const gameWorld = {
       }
       return entity;
    },
-   
-    addPlayer(player) {
+
+   createPlayer(entityObj, newPosition){
+      entityObj[`position`] = newPosition;
+   },
+
+   checkForEncounters() {
+      for (const enemy of this.enemies) {
+         for (const player of this.players) {
+            if (enemy.position === player.position) {
+               const enemyHealth = enemy.health;
+               const playerHealth = player.health;
+               combat(enemyHealth, playerHealth); //Stopped at combat function?? 
+            }
+         }
+      }
+   },
+
+   addPlayer(name, health, position, inventory) {
+      const player = this.createEntity(name, health, position, inventory);
       this.players.push(player);
    },
    removePlayer(player){
       const playerLocation = this.players.indexOf(player);
      if(playerLocation !== -1) {
          this.players.splice(playerLocation,1);
-     };
+     }
    },
-   addEnemy(enemy){
+   addEnemy(name, health, position, inventory){
+      const enemy = this.createEntity(name, health, position, inventory);
       this.enemies.push(enemy);
    },
    removeEnemy(enemy){
@@ -46,7 +61,8 @@ const gameWorld = {
          this.items.splice(itemLocation, 1);
       }
    },
-   addNpc(npc){
+   addNpc(name, health, position, inventory){
+      const npc = this.createEntity(name, health, position, inventory);
       this.npcs.push(npc);
    },
    removeNpc(npc){

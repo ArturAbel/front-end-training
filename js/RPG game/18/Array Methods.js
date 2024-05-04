@@ -1,38 +1,38 @@
 const players = [
    {
-     name: "Hero",
+     name: `Hero`,
      health: 100,
      level: 1,
-     location: "forest",
-     inventory: ["sword", "health potion"],
+     location: `forest`,
+     inventory: [`sword`, `health potion`],
    },
    {
-     name: "Warrior",
+     name: `Warrior`,
      health: 120,
      level: 2,
-     location: "mountain",
-     inventory: ["axe", "shield"],
+     location: `mountain`,
+     inventory: [`axe`, `shield`],
    },
    {
-     name: "Mage",
+     name: `Mage`,
      health: 80,
      level: 3,
-     location: "castle",
-     inventory: ["staff", "spell book"],
+     location: `castle`,
+     inventory: [`staff`, `spell book`],
    },
    {
-     name: "Ranger",
+     name: `Ranger`,
      health: 90,
      level: 2,
-     location: "forest",
-     inventory: ["bow", "arrows"],
+     location: `forest`,
+     inventory: [`bow`, `arrows`],
    },
    {
-     name: "Thief",
+     name: `Thief`,
      health: 70,
      level: 1,
-     location: "cave",
-     inventory: ["dagger", "lockpick"],
+     location: `cave`,
+     inventory: [`dagger`, `lockpick`],
    },
  ];
  
@@ -64,7 +64,7 @@ console.log(`--------------------------------------------\n4.`);
 
 
 const playerNamesLevels = players.map(players => {
-   string =  players.name + "-Level " + players.level;
+   string =  players.name + `-Level ` + players.level;
    return string;
 });
 console.log(playerNamesLevels);
@@ -74,8 +74,37 @@ console.log(`--------------------------------------------\n5.`);
 
 
 const playerName = `Hero`;
-const playerHealth = 150;
+const newPlayerHealth = 150;
 
-// Do it with filter
 
-console.log(players);
+const changePlayerHealth = players.forEach((player)=>{
+  if (player.name === playerName) {
+    player.health = newPlayerHealth;
+  }
+})
+
+console.log(`--------------------------------------------\n6.`);
+
+const locationIndex = `forest`;
+
+const filteredByLocation = players.filter((player) => player.location === locationIndex);
+console.log(filteredByLocation);
+
+
+console.log(`--------------------------------------------\n7.`);
+
+const averageLevels = players.reduce((total,player)=>{
+  return average =  total + player.level / players.length ;
+}, 0);
+
+console.log(averageLevels);
+
+console.log(`--------------------------------------------\n8.`);
+
+const sortByHealth = players.sort((playerA,playerB) => playerA.health - playerB.health);
+console.log(sortByHealth);
+
+console.log(`--------------------------------------------\n9.`);
+
+const inventoryArray = players.map((player)=>player.inventory);
+console.log(inventoryArray);

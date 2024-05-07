@@ -20,34 +20,14 @@
    //  }),
 
 
-   const nameArray = players.map(player => player.name);
+//    const nameArray = players.map(player => player.name);
 
-   const nameArray = players.map(function(player) {
-      return player.name;
-  });
-
-
-
- 
-    
-   
-   
-        
-    
-    
-    
-   
-   
-   
-   
-
-
-
+//    const nameArray = players.map(function(player) {
+//       return player.name;
+//   });
 
     
-    
-    
-    
+
     
     
     

@@ -299,16 +299,46 @@ class Game{
    }
 
     currentCharacter(characterName){
-      if (this.#characters.includes(characterName)) {
-         this.#currentCharacter = characterName;
+      const find = this.#characters.find((character) => character.playerName === characterName);
+      if (find) {
+         this.#currentCharacter = find;
       }
       else{
          throw new Error('Character not found');
       }
     }
-   
- 
+    
+      calculateDamage(attacker, defender){
+         if (!(attacker instanceof Character) || !(defender instanceof Character)) {
+            throw new Error(`Invalid Character`)
+         }
 
+         let baseDamage = 0;
+
+         if (attacker instanceof Warrior) {
+            baseDamage = attacker.strength * attacker.level;
+         }
+         else if(attacker instanceof Mage){
+            baseDamage = attacker.intelligence * attacker.level;
+         }
+
+         let defenseFactor = 0; 
+
+         if (defender instanceof Warrior) {
+            defenseFactor = 1 - (defender.defense / 100);
+         }
+         else if(defender instanceof Mage){
+            defenseFactor = 1- (defender.mana / 200);
+         }
+         const finalDamage = 1 >  Math.round(baseDamage * defenseFactor) ? 1 : Math.round(baseDamage * defenseFactor);
+         
+         return finalDamage;
+      }
+      
+      diceRoll(){
+         return Math.floor(Math.random() * 20 ) + 1;
+      }
+ 
 }
 
 
@@ -352,12 +382,15 @@ console.log(potion.itemName, potion.itemValue);
 const sword = new Weapon('Sword', 100, 24, 'Steel');
 console.log(sword.weaponDetails);
 
+// Add items to character1
 character1.addItem(potion);
 character1.addItem(potion);
 console.log(character1.playerInventory);
 console.log(`All Items Value:`,character1.getAllItemsValue);
 console.log(character1.displayCharacter());
 
-
 // Creating Game
 const game = Game.getInstance();
+
+// Add character1 to game
+game.addCharacter(character1);

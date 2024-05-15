@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>example dynamic</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: rgb(227, 220, 220);
+
+    }
+
+    .hide {
+      display: none;
+    }
+
+    section {
+      width: 100%;
+      padding-top: 100px;
+      display: flex;
+      gap: 35px;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    p {
+      font-size: 24px;
+    }
+
+    button {
+      width: 150px;
+      height: 70px;
+      cursor: pointer;
+      margin: 0 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <h1 class="name-place-holder">My name place holder</h1>
+    <p class="favorite-color">My favorite color is: <span id="favorite-color-text">My color place holder</span></p>
+    <div class="color-picker">
+      <button onclick="changeColor(this)">red</button>
+      <button onclick="changeColor(this)">blue</button>
+      <button onclick="changeColor(this)">orange</button>
+      <button onclick="changeColor(this)">yellow</button>
+    </div>
+    <button onclick="replaceMyName('Elad',this)">My name</button>
+    <button onclick="initColors(this)">init color</button>
+  </section>
+  <script>
+    const favoriteColorText = document.getElementById("favorite-color-text");
+    const myNameText = document.querySelector(".name-place-holder");
+    const colorButtons = document.querySelectorAll('.color-picker button')
+
+    function changeColor(button) {
+      favoriteColorText.style.color = button.textContent;
+      favoriteColorText.textContent = button.textContent;
+    }
+
+    function replaceMyName(name, button) {
+      myNameText.textContent = name;
+      button.remove();
+    }
+
+    function initColors(initButton){
+      colorButtons.forEach(colorButton=>{
+        colorButton.style.color = colorButton.textContent;
+      });
+      initButton.remove();
+    }
+  </script>
+</body>
+
+</html>

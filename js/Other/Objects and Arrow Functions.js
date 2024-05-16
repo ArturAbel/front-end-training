@@ -11,12 +11,6 @@
 // },
 
 
-
-
-
-
-
-
 // Same function just arrow function
 // createEntity2: (name, health, position, inventory) => ({
 //    name: name,
@@ -31,4 +25,6 @@
 //    const nameArray = players.map(function(player) {
 //       return player.name;
 //   });
+
+
 

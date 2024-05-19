@@ -4,7 +4,7 @@
 const paragraphs = document.querySelectorAll('.highlightable');
 
 paragraphs.forEach(paragraph => {
-   paragraph.addEventListener('mouseover', function(event){
+   paragraph.addEventListener('mouseover', function(){
       paragraph.classList.add('highlighted');
    });
 });

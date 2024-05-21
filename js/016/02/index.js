@@ -126,7 +126,7 @@ form.addEventListener("input", function (e) {
   }
 });
 
-submitElement.addEventListener("submit", function (e) {
+form.addEventListener("submit", function (e) {
   e.preventDefault();
 
   let isUserValid = checkUsername();
@@ -134,5 +134,6 @@ submitElement.addEventListener("submit", function (e) {
   let isPassValid = checkPassword();
 
   if (isUserValid && isEmailValid && isPassValid) {
+    console.log('Submitted');
   }
 });

@@ -28,3 +28,21 @@
 
 
 
+const string = "  hello world nice bro good ";
+
+const capitalized = (sentence) => {
+   sentence = sentence.trim().split(' ');
+   return sentence.map(word  =>  word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+}
+
+console.log(capitalized(string));
+
+
+
+
+const items = ['iron sword', 'healing potion', 'steel shield', 'iron helm'];
+
+const filteredItems = items.filter(item => item.includes('iron'));
+
+console.log(`Filtered Items:`,filteredItems);
+

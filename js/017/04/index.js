@@ -7,21 +7,20 @@ const postsURL = "https://jsonplaceholder.typicode.com/posts";
 const fetchUsers = fetch(usersURL).then((response) => response.json());
 const fetchPosts = fetch(postsURL).then((response) => response.json());
 
-Promise.all([fetchUsers, fetchPosts])
-.then(([users, posts]) => {
+Promise.all([fetchUsers, fetchPosts]).then(([users, posts]) => {
   users.forEach((user) => {
     const userDiv = document.createElement("div");
-    buildElement(userDiv,usersElement,user,createUserDiv);
-  })
-  
+    buildElement(userDiv, usersElement, user, createUserDiv);
+  });
+
   posts.forEach((post) => {
-   const postDiv = document.createElement("div");
-   buildElement(postDiv,usersElement,post,createPostDiv);
-  })
+    const postDiv = document.createElement("div");
+    buildElement(postDiv, postsElement, post, createPostDiv);
+  });
 });
 
 //  Build an element -> add class/structure/append
-function buildElement(element, fatherElement,content,createFunction) {
+function buildElement(element, fatherElement, content, createFunction) {
   element.classList.add("item");
   element.innerHTML = createFunction(content);
   fatherElement.appendChild(element);
@@ -29,11 +28,10 @@ function buildElement(element, fatherElement,content,createFunction) {
 
 //User element structure
 function createUserDiv(user) {
-  return `<strong>${user.name}</strong><br>${user.email}`
+  return `<strong>${user.name}</strong><br>${user.email}`;
 }
 
 //Post element structure
-function createPostDiv(post){
-   return `<h3>${post.title}</h3><br>${post.body}`
+function createPostDiv(post) {
+  return `<h3>${post.title}</h3><br>${post.body}`;
 }
-

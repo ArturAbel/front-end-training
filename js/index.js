@@ -1,10 +1,15 @@
-// Write a function calculateAverage that takes an array of numbers as an argument and returns
-//  the average (mean) of those numbers.
+const arr = ['a', 'b', 'c', 'd'];
 
-const calculateAverage = (arr) =>
-  arr.length ? arr.reduce((acc, curr) => acc + curr, 0) / arr.length : 0;
+const word = arr.reduceRight((acc,cur) => acc+cur);
+console.log(word);
 
-// Examples
-console.log(calculateAverage([3, 7, 10, 5])); // Output: 6.25
-console.log(calculateAverage([12, 18, 25, 8])); // Output: 15.75
-console.log(calculateAverage([2, 4, 6, 8])); // Output: 5
+
+
+const string = '3h 45min';
+const num = string.split('').filter(letter => +letter).map(number => +number);
+console.log(`${num[0]}h ${num[1]}${num[2]}min`);
+
+
+
+const numbers = string.match(/\d+/g).map(number => +number);
+console.log(`${numbers[0]}h ${numbers[1]}min`);

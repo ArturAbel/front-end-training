@@ -1,3 +1,3 @@
 ## front-end-training
-I'm Artur, presently, fully engaged in a Front-End Bootcamp, eagerly absorbing knowledge and skills to elevate my craft.<br>
+Hello, I'm Artur. I recently completed an intensive Front-End Bootcamp, where I developed a strong foundation in modern web development technologies. My passion lies in crafting well-designed, user-centric websites that not only look great but also provide seamless, intuitive experiences. I am committed to continuous learning and constantly refining my skills to stay at the forefront of the ever-evolving digital landscape.<br>
 <br><br><a href="https://gifyu.com/image/SV3nd"><img src="https://s12.gifyu.com/images/SV3nd.gif" alt="cat" border="0" width="250" height="220" /></a>
